@@ -1,0 +1,52 @@
+[
+  {
+    "file": "qr/1_copernicus.png",
+    "title": "Николай Коперник",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#copernicus"
+  },
+  {
+    "file": "qr/2_galileo.png",
+    "title": "Галилео Галилей",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#galileo"
+  },
+  {
+    "file": "qr/3_bruno.png",
+    "title": "Джордано Бруно",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#bruno"
+  },
+  {
+    "file": "qr/4_lomonosov.png",
+    "title": "Михаил Ломоносов",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#lomonosov"
+  },
+  {
+    "file": "qr/5_tsiolkovsky.png",
+    "title": "Константин Циолковский",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#tsiolkovsky"
+  },
+  {
+    "file": "qr/6_korolev.png",
+    "title": "Сергей Королёв",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#korolev"
+  },
+  {
+    "file": "qr/7_sputnik.png",
+    "title": "Первый спутник",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#sputnik"
+  },
+  {
+    "file": "qr/8_gagarin.png",
+    "title": "Юрий Гагарин",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#gagarin"
+  },
+  {
+    "file": "qr/9_moon.png",
+    "title": "Высадка на Луну",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#moon"
+  },
+  {
+    "file": "qr/10_iss.png",
+    "title": "МКС",
+    "url": "https://ВАШ-АДРЕС-САЙТА/space_week/index.html#iss"
+  }
+]

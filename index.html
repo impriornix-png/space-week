@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Неделя истории: Космос и история</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #141b34;
+      --panel-2: #1c2547;
+      --text: #eef3ff;
+      --muted: #b9c3e3;
+      --accent: #89b4ff;
+      --accent-2: #ffd166;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #16224d 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    header {
+      padding: 56px 20px 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 5vw, 48px);
+    }
+    header p {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px 50px;
+    }
+    .intro {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .intro strong { color: var(--accent-2); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+    .nav-card, .topic {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .nav-card a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      padding: 18px;
+      height: 100%;
+    }
+    .nav-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .nav-card p { margin: 0; color: var(--muted); }
+    .topic {
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .topic-inner {
+      display: grid;
+      grid-template-columns: minmax(220px, 320px) 1fr;
+      gap: 0;
+    }
+    .topic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 280px;
+      background: #0e1429;
+    }
+    .topic-content {
+      padding: 24px;
+    }
+    .topic-content h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: clamp(26px, 4vw, 34px);
+    }
+    .lead {
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .facts {
+      margin: 14px 0 0;
+      padding-left: 20px;
+    }
+    .facts li { margin-bottom: 10px; }
+    .back {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 20px 10px 40px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(137, 180, 255, 0.12);
+      border: 1px solid rgba(137, 180, 255, 0.25);
+      color: var(--accent);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 760px) {
+      .topic-inner { grid-template-columns: 1fr; }
+      .topic img { min-height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Неделя истории: космос, открытия и люди</h1>
+    <p>Наводи камеру на QR-код, открывай страницу и узнавай, как история человечества шаг за шагом дотянулась до звёзд. Да, от Коперника до Гагарина — путь длинный, но безумно красивый.</p>
+  </header>
+
+  <div class="wrap">
+    <section class="intro">
+      <strong>Как это работает:</strong> каждый QR-код ведёт к отдельному разделу этой страницы. Здесь собраны короткие исторические справки, изображения и любопытные факты, которые можно читать прямо с телефона во время школьного квеста.
+    </section>
+
+    <section class="grid">
+      <article class="nav-card"><a href="#copernicus"><h3>Николай Коперник</h3><p>Человек, который сдвинул Землю с трона.</p></a></article>
+      <article class="nav-card"><a href="#galileo"><h3>Галилео Галилей</h3><p>Учёный, который посмотрел в телескоп — и не смог развидеть.</p></a></article>
+      <article class="nav-card"><a href="#bruno"><h3>Джордано Бруно</h3><p>Мыслитель о бесконечной Вселенной.</p></a></article>
+      <article class="nav-card"><a href="#lomonosov"><h3>Михаил Ломоносов</h3><p>Русский учёный, открывший атмосферу Венеры.</p></a></article>
+      <article class="nav-card"><a href="#tsiolkovsky"><h3>Константин Циолковский</h3><p>Теоретик космонавтики ещё до эры ракет.</p></a></article>
+      <article class="nav-card"><a href="#korolev"><h3>Сергей Королёв</h3><p>Главный конструктор космической эпохи СССР.</p></a></article>
+      <article class="nav-card"><a href="#sputnik"><h3>Первый спутник</h3><p>Сигнал, который услышал весь мир.</p></a></article>
+      <article class="nav-card"><a href="#gagarin"><h3>Юрий Гагарин</h3><p>Первый человек в космосе.</p></a></article>
+      <article class="nav-card"><a href="#moon"><h3>Высадка на Луну</h3><p>Шаг человека, спор веков и триумф технологий.</p></a></article>
+      <article class="nav-card"><a href="#iss"><h3>МКС</h3><p>Космос как территория сотрудничества.</p></a></article>
+    </section>
+
+    <section class="topic" id="copernicus">
+      <div class="topic-inner">
+        <img src="assets/copernicus.jpg" alt="Николай Коперник" />
+        <div class="topic-content">
+          <div class="pill">XVI век</div>
+          <h2>Николай Коперник</h2>
+          <div class="lead">Коперник предложил гелиоцентрическую систему мира: не Солнце вращается вокруг Земли, а Земля и другие планеты движутся вокруг Солнца.</div>
+          <p>Для своего времени это было почти интеллектуальное землетрясение. Средневековая картина мира ставила Землю в центр Вселенной, а Коперник аккуратно, но очень уверенно показал: центр — вовсе не там, где человеку удобно.</p>
+          <ul class="facts">
+            <li>Главный труд Коперника — <em>«О вращении небесных сфер»</em>.</li>
+            <li>Его идеи подорвали прежние представления об устройстве мира и подготовили Научную революцию.</li>
+            <li>Коперник был не только астрономом, но и врачом, экономистом и церковным деятелем. Универсал уровня «я просто зашёл посмотреть».</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="galileo">
+      <div class="topic-inner">
+        <img src="assets/galileo.jpg" alt="Галилео Галилей" />
+        <div class="topic-content">
+          <div class="pill">XVII век</div>
+          <h2>Галилео Галилей</h2>
+          <div class="lead">Галилей не изобрёл телескоп, но именно он первым применил его для систематических астрономических наблюдений.</div>
+          <p>Он увидел горы на Луне, фазы Венеры, спутники Юпитера и пятна на Солнце. Всё это доказывало: небесный мир вовсе не идеален и неподвижен, как считалось раньше.</p>
+          <ul class="facts">
+            <li>Открытие спутников Юпитера стало сильным аргументом против геоцентризма.</li>
+            <li>За поддержку идей Коперника Галилей столкнулся с судом инквизиции.</li>
+            <li>Его наблюдения стали поворотным моментом в истории науки: теперь спорили не только словами, но и фактами.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="bruno">
+      <div class="topic-inner">
+        <img src="assets/bruno.jpg" alt="Джордано Бруно" />
+        <div class="topic-content">
+          <div class="pill">XVI век</div>
+          <h2>Джордано Бруно</h2>
+          <div class="lead">Бруно пошёл дальше Коперника: он предположил, что Вселенная бесконечна, а звёзды — это далёкие солнца с собственными мирами.</div>
+          <p>Для эпохи, когда многие ещё привыкали к мысли, что Земля — не центр мира, это звучало как космический уровень дерзости. Бруно был не астрономом в строгом смысле, а философом, но его идеи расширили представление человека о масштабе Вселенной.</p>
+          <ul class="facts">
+            <li>Бруно не проводил телескопических наблюдений, но смело развивал новые космологические идеи.</li>
+            <li>Его взгляды вступили в конфликт с церковными догматами.</li>
+            <li>Сегодня Бруно часто вспоминают как символ свободы мысли.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="lomonosov">
+      <div class="topic-inner">
+        <img src="assets/lomonosov.jpg" alt="Михаил Ломоносов" />
+        <div class="topic-content">
+          <div class="pill">XVIII век</div>
+          <h2>Михаил Ломоносов</h2>
+          <div class="lead">Во время прохождения Венеры по диску Солнца в 1761 году Ломоносов сделал вывод, что у Венеры есть атмосфера.</div>
+          <p>Это было огромное достижение русской науки. Ломоносов показал, что небесные тела можно изучать как реальные физические объекты, а не просто как светящиеся точки на небе.</p>
+          <ul class="facts">
+            <li>Ломоносов был энциклопедистом: химик, физик, поэт, историк и астроном.</li>
+            <li>Его наблюдение атмосферы Венеры стало важной страницей в истории мировой астрономии.</li>
+            <li>Он активно развивал идею о значении науки для государства и общества.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="tsiolkovsky">
+      <div class="topic-inner">
+        <img src="assets/tsiolkovsky.jpg" alt="Константин Циолковский" />
+        <div class="topic-content">
+          <div class="pill">Конец XIX — начало XX века</div>
+          <h2>Константин Циолковский</h2>
+          <div class="lead">Циолковский первым научно обосновал возможность космических полётов с помощью реактивных аппаратов.</div>
+          <p>Когда полёты в космос казались фантастикой, он уже писал о многоступенчатых ракетах, орбитальных станциях и будущем человечества за пределами Земли. Иногда история науки выглядит как спойлер к будущему — это тот случай.</p>
+          <ul class="facts">
+            <li>Ему принадлежит знаменитая мысль: «Земля — колыбель человечества, но нельзя вечно жить в колыбели».</li>
+            <li>Циолковский работал учителем и во многом занимался наукой самостоятельно.</li>
+            <li>Его идеи легли в основу практической космонавтики XX века.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="korolev">
+      <div class="topic-inner">
+        <img src="assets/korolev.jpg" alt="Сергей Королёв" />
+        <div class="topic-content">
+          <div class="pill">XX век</div>
+          <h2>Сергей Королёв</h2>
+          <div class="lead">Королёв стал ключевой фигурой советской космической программы и руководил созданием ракет, спутников и кораблей первых космических полётов.</div>
+          <p>Именно под его руководством был запущен первый искусственный спутник Земли, а затем отправлен в космос Юрий Гагарин. Долгое время имя Королёва держалось в секрете: его называли просто «Главный конструктор».</p>
+          <ul class="facts">
+            <li>Королёв прошёл через репрессии 1930-х годов и позже вернулся к работе в авиации и ракетостроении.</li>
+            <li>Он сыграл решающую роль в космическом лидерстве СССР в начале космической эры.</li>
+            <li>Во многом именно его организаторский талант превратил идеи в реальные полёты.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="sputnik">
+      <div class="topic-inner">
+        <img src="assets/sputnik.jpg" alt="Первый искусственный спутник Земли" />
+        <div class="topic-content">
+          <div class="pill">4 октября 1957 года</div>
+          <h2>Первый искусственный спутник Земли</h2>
+          <div class="lead">Запуск советского спутника стал началом космической эры человечества.</div>
+          <p>Небольшой металлический шар с антеннами облетал Землю и передавал знаменитые радиосигналы. Для мира это стало шоком и восхищением одновременно: космос оказался не далёкой мечтой, а уже реальностью.</p>
+          <ul class="facts">
+            <li>Спутник весил около 83,6 кг.</li>
+            <li>Его сигналы можно было принимать по радио в разных странах.</li>
+            <li>Событие резко усилило интерес к науке, образованию и космическим программам по всему миру.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="gagarin">
+      <div class="topic-inner">
+        <img src="assets/gagarin.jpg" alt="Юрий Гагарин" />
+        <div class="topic-content">
+          <div class="pill">12 апреля 1961 года</div>
+          <h2>Юрий Гагарин</h2>
+          <div class="lead">Гагарин стал первым человеком, совершившим полёт в космическое пространство.</div>
+          <p>Корабль «Восток-1» совершил один виток вокруг Земли. Полёт длился 108 минут, но изменил историю навсегда. После Гагарина космос перестал быть только сферой расчётов и чертежей — в него вошёл человек.</p>
+          <ul class="facts">
+            <li>Фраза «Поехали!» стала символом начала новой эпохи.</li>
+            <li>Гагарин мгновенно превратился в мировую знаменитость.</li>
+            <li>12 апреля сегодня отмечается как День космонавтики.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="moon">
+      <div class="topic-inner">
+        <img src="assets/moon.jpg" alt="Высадка на Луну" />
+        <div class="topic-content">
+          <div class="pill">20 июля 1969 года</div>
+          <h2>Высадка на Луну</h2>
+          <div class="lead">Экспедиция «Аполлон-11» стала первым в истории пилотируемым прилунением.</div>
+          <p>Нил Армстронг и Базз Олдрин вышли на поверхность Луны, а Майкл Коллинз оставался на орбите. Это был не просто успех США в космической гонке, а крупнейший технологический прорыв XX века.</p>
+          <ul class="facts">
+            <li>Знаменитая фраза Армстронга стала символом покорения космоса.</li>
+            <li>Лунная программа показала, как политика, наука и техника могут действовать вместе.</li>
+            <li>Споры вокруг Луны не утихают до сих пор, но исторические и технические свидетельства подтверждают факт высадки.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic" id="iss">
+      <div class="topic-inner">
+        <img src="assets/iss.jpg" alt="Международная космическая станция" />
+        <div class="topic-content">
+          <div class="pill">С 1998 года</div>
+          <h2>Международная космическая станция</h2>
+          <div class="lead">МКС стала примером того, что космос может быть не только полем соперничества, но и площадкой сотрудничества.</div>
+          <p>В создании и работе станции участвуют разные страны. На борту проводятся научные эксперименты, проверяются технологии для будущих дальних полётов и изучается влияние космоса на человека.</p>
+          <ul class="facts">
+            <li>МКС движется по орбите со скоростью примерно 28 000 км/ч.</li>
+            <li>Станция делает около 16 витков вокруг Земли в сутки.</li>
+            <li>Её история показывает: даже после эпохи жесткой космической гонки космос может объединять.</li>
+          </ul>
+          <a class="back" href="#top">↑ Наверх</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Материал подготовлен для школьной недели истории. Формат: QR-квест по школе.
+  </footer>
+</body>
+</html>
